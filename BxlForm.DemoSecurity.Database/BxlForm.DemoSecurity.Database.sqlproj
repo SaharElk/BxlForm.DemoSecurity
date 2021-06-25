@@ -75,6 +75,7 @@
     <Build Include="Programmability\Procedures\BFSP_DeleteContact.sql" />
     <Build Include="Programmability\Procedures\BFSP_AddContact.sql" />
     <Build Include="Programmability\Procedures\BFSP_AddCategory.sql" />
+    <Build Include="Programmability\Procedures\BFSP_DeleteCategory.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

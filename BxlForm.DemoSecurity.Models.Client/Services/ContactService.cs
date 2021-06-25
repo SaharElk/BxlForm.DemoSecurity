@@ -26,6 +26,11 @@ namespace BxlForm.DemoSecurity.Models.Client.Services
             return _globalRepository.Get(userId, id)?.ToClient();
         }
 
+        public IEnumerable<Contact> GetByCategory(int categoryId)
+        {
+            return _globalRepository.GetByCategory(categoryId).Select(c => c.ToClient());
+        }
+
         public void Insert(Contact contact)
         {
             _globalRepository.Insert(contact.ToGlobal());

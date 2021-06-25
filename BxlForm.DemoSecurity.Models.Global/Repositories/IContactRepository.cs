@@ -12,5 +12,7 @@ namespace BxlForm.DemoSecurity.Models.Global.Repositories
         void Insert(Contact contact);
         void Update(int id, Contact contact);
         void Delete(int userId, int id);
+
+        IEnumerable<Contact> GetByCategory(int categoryId);
     }
 }

@@ -31,6 +31,13 @@ namespace BxlForm.DemoSecurity.Models.Global.Services
             return _connection.ExecuteReader(command, dr => dr.ToContact()).SingleOrDefault();
         }
 
+        public IEnumerable<Contact> GetByCategory(int categoryId)
+        {
+            Command command = new Command("Select Id, LastName, FirstName, Email, CategoryId, UserId From Contact Where CategoryId = @CategoryId;", false);
+            command.AddParameter("CategoryId", categoryId);
+            return _connection.ExecuteReader(command, dr => dr.ToContact());
+        }
+
         public void Insert(Contact contact)
         {
             Command command = new Command("BFSP_AddContact", true);

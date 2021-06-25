@@ -74,6 +74,7 @@ namespace BxlForm.DemoSecurity
 
             app.UseEndpoints(endpoints =>
             {
+                // Endpoints de areas doit se retrouver au dessus du endpoints de default
                 endpoints.MapControllerRoute(
                     name: "areas",
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");

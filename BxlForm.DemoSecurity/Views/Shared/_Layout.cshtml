@@ -41,6 +41,12 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">@sessionManager.User.LastName @sessionManager.User.FirstName (Logout)</a>
                             </li>
+                            @if (sessionManager.User.IsAdmin)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Index</a>
+                                </li>
+                            }
                         }
                     </ul>
                 </div>

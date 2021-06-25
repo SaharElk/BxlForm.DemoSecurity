@@ -21,5 +21,20 @@ namespace BxlForm.DemoSecurity.Models.Client.Services
         {
             return _globalRepository.Get().Select(c => c.ToClient());
         }
+
+        public void Insert(Category category)
+        {
+            _globalRepository.Insert(category.ToGlobal());
+        }
+
+        public void Update(int id, Category category)
+        {
+            _globalRepository.Update(id, category.ToGlobal());
+        }
+
+        public void Delete(int id)
+        {
+            _globalRepository.Delete(id);
+        }
     }
 }
